@@ -9,7 +9,8 @@ int main(void)
 {
 	char c;
 	int i;
-	double d;
+	long l;
+	long long ll;
 	float f;
 
 	printf("Size of a char: %lu", (unsigned long)sizeof(c));
@@ -22,7 +23,6 @@ int main(void)
 	printf(" byte(s)\n");
 	printf("Size of a float: %lu", (unsigned long)sizeof(f));
 	printf(" byte(s)\n");
-	
-	return (0);
+    return (0);
 }
 
