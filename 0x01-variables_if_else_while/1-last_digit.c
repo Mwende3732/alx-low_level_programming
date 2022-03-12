@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
  * main - Determine either greater than 5, is less than 6, or is 0
  * Return: 0 on success
