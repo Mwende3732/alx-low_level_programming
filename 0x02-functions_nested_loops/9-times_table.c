@@ -8,28 +8,28 @@ void times_table(void)
 {
 	int col, row, mul;
 
-	for (col = 0; col < 10; col++)
+	for (col = 0; col <= 9; col++)
 	{
-		for (row = 0; row < 10; row++)
+		for (row = 0; row <= 9; row++)
 		{
-			mul = col * row;
-			if (mul > 9)
+			mul = (col * row);
+			if (row != 0)
 			{
-				_putchar('.');
+				_putchar(',');
 				_putchar(' ');
+			}
+			if (mul >= 10)
+			{
 				_putchar((mul / 10) + '0');
 				_putchar((mul % 10) + '0');
 			}
-			else
+			else if (mul < 10 && row !=0)
 			{
-				if (row != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				_putchar(mul + '0');
+				_putchar(' ');
+				_putchar((mul % 10) + '0');
 			}
+			_putchar((mul % 10) + '0');
 		}
 		_putchar('\n');
-	}}
+	}
+}
