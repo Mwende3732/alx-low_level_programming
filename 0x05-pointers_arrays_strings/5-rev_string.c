@@ -23,3 +23,4 @@ void rev_string(char *s)
 		*(s + a) = *(s + (p - (a + 1)));
 		*(s + (p - (a + 1))) = q;
 	}
+}
