@@ -7,7 +7,7 @@
  * @n: number of values to copy
  * Description: copies string
  * Return: pointer to dest
- * */
+ **/
 
 char *_strncpy(char *dest, char *src, int n)
 {
