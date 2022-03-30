@@ -19,7 +19,7 @@ int check_int(int square, int x)
 		return (-1);
 }
 
-/*8
+/**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: integer
  * Return: integer - square root, if none returns -1
