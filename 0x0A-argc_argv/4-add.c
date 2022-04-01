@@ -36,7 +36,7 @@ int is_number(char *s)
 
 int main(int argc, char *argv[])
 {
-	int i, sum, is_mun;
+	int i, sum, is_num;
 
 	sum = 0;
 	if (argc == 1)
