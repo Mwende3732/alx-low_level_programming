@@ -1,11 +1,11 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
  * new_dog - creates a new dog
  * @name: name of the dog
  * @age: age of the dog
+ * @owner: owner of dog
  *
  * Return: struct dog
  * if fails return NULL
