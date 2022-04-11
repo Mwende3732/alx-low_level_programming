@@ -3,12 +3,12 @@
 
 /**
  * malloc_checked - for memory allocation.
- * @b: amount of bytes.
+ * @b:amount of bytes.
  *
- * return: pointer to the allocated memory.
+ * Return: pointer to the allocated memory.
  * if malloc fails, status value is equal to 98.
  */
-void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int b)
 {
 	char *p;
 
