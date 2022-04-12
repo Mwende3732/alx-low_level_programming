@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
+ * new_dog - creates a new dog.
+ * @name: name of the dog.
  * @age: age of the dog
- * @owner: owner of dog
+ * @owner: owner of the dog.
  *
- * Return: struct dog
- * if fails return NULL
+ * Return: struct dog.
+ * if fails, returns NULL.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -23,9 +23,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	for (lname = 0; name[lname]; lname++)
-		;
-
-	for (lowner = 0; owner[lowner]; lowner++)
 		;
 
 	p_dog->name = malloc(lname + 1);
@@ -45,7 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	p_dog->age = age;
 
-	for (i = 0; i < lower; i++)
+	for (i = 0; i < lowner; i++)
 		p_dog->owner[i] = owner[i];
 	p_dog->owner[i] = '\0';
 
