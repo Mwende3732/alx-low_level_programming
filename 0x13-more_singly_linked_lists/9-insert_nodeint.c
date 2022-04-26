@@ -1,52 +1,50 @@
-#include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "lists.h"
 
 /**
- * insert_nodeint_at_index - inserts node at given position
- * @head: pointer to head of list
- * @index: index of new node
- * @n: value for data element
- * Return: address of new node, NULL if fails
- **/
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
+  * insert_nodeint_at_index - ...
+  * @head: ...
+  * @idx: ...
+  * @n: ...
+  *
+  * Return: ...
+  */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *prior, *new;
-	unsigned int i;
+	listint_t *new_node, *iter;
+	unsigned int count = 1;
 
-	if (head == NULL)
-		return (NULL);
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = NULL;
-	if (index == 0)
+	if (head)
 	{
-		new->next = *head;
-		*head = new;
-		return (*head);
-	}
-	new->next = (*head)->next;
-	prior = *head;
-	for (i = 1; i < index; i++)
-	{
-
-		prior = prior->next;
-		if (prior == NULL)
-		{
-			free(new);
+		new_node = malloc(sizeof(listint_t));
+		if (new_node == NULL)
 			return (NULL);
-		}
-		new->next = prior->next;
 
-		if (new->next == NULL && i != index - 1)
+		new_node->n = n;
+		if (idx > 0)
 		{
-			free(new);
-			return (NULL);
+			iter = *head;
+			while (iter)
+			{
+				if (count == idx)
+				{
+					new_node->next = iter->next;
+					iter->next = new_node;
+					return (new_node);
+				}
+				iter = iter->next;
+				count++;
+			}
+			if (idx > count)
+				return (NULL);
 		}
+		else
+		{
+			new_node->next = *head;
+			*head = new_node;
+		}
+		return (new_node);
 	}
-	new->next = prior->next;
-	prior->next = new;
-	return (new);
+	return (NULL);
 }
