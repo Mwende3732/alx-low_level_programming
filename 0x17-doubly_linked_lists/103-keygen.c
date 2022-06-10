@@ -59,8 +59,7 @@ int f5(char *usrn, int len)
  *
  * @usrn: username
  * Return: a random char
- 0x2b554c59634a474f, 0x71786636576a6d34,
-		0x72316 */
+ */
 int f6(char *usrn)
 {
 	int ch;
@@ -83,17 +82,15 @@ int f6(char *usrn)
  * @argc: arguments count
  * @argv: arguments vector
  * Return: Always 0
-ch = 0; keygen[ch]; ch++)
-		printf("%c", keygen[ch]);
-	return (0);
-} */
+ */
 int main(int argc, char **argv)
 {
 	char keygen[7];
 	int len, ch, vch;
 	long alph[] = {
 		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
-		0x74767a5835737956,1513346655a, 0x6b756f494b646850 };
+		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
+		0x723161513346655a, 0x6b756f494b646850 };
 	(void) argc;
 
 	for (len = 0; argv[1][len]; len++)
@@ -124,4 +121,7 @@ int main(int argc, char **argv)
 	/* ----------- f6 ----------- */
 	keygen[5] = ((char *)alph)[f6(argv[1])];
 	keygen[6] = '\0';
-	for (
+	for (ch = 0; keygen[ch]; ch++)
+		printf("%c", keygen[ch]);
+	return (0);
+}
