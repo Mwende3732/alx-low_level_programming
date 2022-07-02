@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 #include <stdio.h>
-de <stdlib.h>
+#include <stdlib.h>
 /**
- *hash_table_print - prints the #incluhash table in a key:value format
+ *hash_table_print - prints the hash table in a key:value format
  *@ht: pointer to hashtable
  *Return: void
  */
